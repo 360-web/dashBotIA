@@ -12,7 +12,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123'; // CONTRASEÑA POR DEFECTO
 
 // Middleware
@@ -228,6 +227,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor Backend corriendo en http://localhost:${PORT}`);
+const PORT = process.env.PORT || process.env.APP_PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor Backend corriendo en puerto ${PORT}`);
 });
