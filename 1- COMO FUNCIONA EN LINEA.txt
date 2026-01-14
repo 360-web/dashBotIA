@@ -1,0 +1,43 @@
+
+🔐 Cómo funcionará en internet:
+Tu Panel: Entras a https://tu-dominio.com y verás la pantalla de Login. Introduce tu contraseña y podrás crear tus bots desde cualquier lugar.
+Tus Clientes: En la pestaña "Instalación" de cada bot, ahora el código apuntará automáticamente a tu dominio. Solo copia y pega en sus sitios web.
+Base de Datos: Los bots y los leads se guardarán en un archivo llamado db.json dentro del servidor, así que no se perderán aunque cierres tu PC.
+¡Tu plataforma de chatbots ya es profesional y está lista para el mercado! ¿Hay algo más en lo que pueda ayudarte antes de que empieces a subirla?
+
+
+El código de instalación debe pegarse en el archivo principal de la página web del cliente. Dependiendo de cómo esté hecha la web, aquí tienes las opciones más comunes:
+
+1. Si la web es HTML puro (index.html)
+Debes buscar el archivo 
+index.html
+ del cliente y pegar el código justo antes de la etiqueta de cierre </body>.
+
+<!-- ... resto del código del cliente ... -->
+
+<!-- PEGAR AQUÍ EL CÓDIGO DE BOTFORGE -->
+<script>
+  window.chatbotConfig = {
+    botId: "ID_DEL_BOT",
+    apiUrl: "https://tu-dominio-en-hostinger.com",
+    theme: {
+      primary: "#6366f1",
+      position: "bottom-right"
+    }
+  };
+</script>
+<script src="https://tu-dominio-en-hostinger.com/widget.js" async></script>
+
+</body>
+</html>
+
+
+2. Si la web es WordPress (Muy común)
+No tienes que editar archivos por código. Recomiéndale a tu cliente (o hazlo tú) lo siguiente:
+
+Instalar el plugin gratuito "Insert Headers and Footers" (ahora se llama "WPCode").
+Ir al panel del plugin y pegar el código en la sección de "Footer" (Pie de página).
+Esto hará que el chat aparezca en todas las páginas de su WordPress automáticamente.
+3. Si usan un constructor visual (Elementor, Divi, Wix, Shopify)
+Wix/Shopify: Buscas la opción de "Añadir código personalizado" o "Custom liquid" y pegas el bloque completo.
+Elementor: Usas el widget llamado "HTML" y lo arrastras al pie de página (footer) o simplemente lo dejas al final de la página.

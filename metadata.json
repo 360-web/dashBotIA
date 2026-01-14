@@ -1,0 +1,8 @@
+{
+  "name": "BotForge Admin - Client AI Chatbot Manager",
+  "description": "A professional dashboard for creating, managing, and deploying customized AI chatbots for clients using Gemini AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
